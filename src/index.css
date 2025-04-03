@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  --navbar-color-first: rgb(45, 45, 45);
+  --navbar-color-second: rgb(69, 69, 69);
+  --navbar-color-third: rgb(99, 99, 99);
+  --navbar-color-fourd: rgb(121, 121, 121);
+  --Ok-button-color: rgb(96, 188, 72);
+  --border-button-color: rgb(45, 45, 45);
+}
+
+.trapezoid-botton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 30px;
+  background: var(--Ok-button-color);
+  z-index: 2;
+}
+
+.trapezoid-botton:before {
+  content: " ";
+  display: block;
+  background: var(--Ok-button-color);
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  transform: skew(10deg);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.trapezoid-botton:after {
+  content: " ";
+  display: block;
+  background: var(--Ok-button-color);
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  transform: skew(-10deg);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.trapezoid {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 75px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: var(--navbar-color-fourd);
+}
+.trapezoid:before {
+  content: " ";
+  display: block;
+  background: var(--navbar-color-fourd);
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  transform: skew(10deg);
+  border-bottom-left-radius: 10px;
+  z-index: -1;
+}
+.trapezoid:after {
+  content: " ";
+  display: block;
+  background: var(--navbar-color-fourd);
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  transform: skew(-10deg);
+  border-bottom-right-radius: 10px;
+  z-index: -1;
+}
+
+
+.white-shadow {
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+.border-bottom{
+  border-bottom:3px solid black ;
+}
