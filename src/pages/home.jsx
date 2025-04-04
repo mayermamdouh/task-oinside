@@ -4,6 +4,8 @@ import { FiZoomIn } from "react-icons/fi";
 import { FiZoomOut } from "react-icons/fi";
 import { Joystick } from "react-joystick-component";
 import { useEffect, useState, useRef } from "react";
+import Gauge from "./gauge";
+import { FaCar, FaTruck } from "react-icons/fa";
 
 function Home() {
   const [speed, setSpeed] = useState(0.5);
@@ -317,6 +319,11 @@ function Home() {
           stickColor="#111827"
           // move={handleMove1}
         />
+      </div>
+      <div className="absolute top-[130px] flex flex-row left-1/2 transform -translate-x-1/2 gap-3">
+        <Gauge value={5} label=" " icon={<FaCar />} />
+        <Gauge value={35} label="NE" icon={null} />
+        <Gauge value={10} label=" " icon={<FaTruck />} />
       </div>
     </>
   );
